@@ -1,0 +1,19 @@
+
+
+
+
+%
+
+clc
+close all
+clear
+
+% Punto 1
+
+MEDIDAS=zeros(20,4);
+for i = 1:20
+    imTmp = imread(['Imagen', num2str(i),'.jpg']);
+    imTmp=rgb2gray(imTmp);
+    MEDIDAS(i,1:2)= [min(imTmp(:)),max(imTmp(:)),max(imTmp(:))];
+    %figure,imshow(imTmp);
+end
